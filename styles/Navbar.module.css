@@ -1,0 +1,148 @@
+.navbar {
+  background-color: rgb(35, 96, 209);
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal {
+  width: 80%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+.navbar a {
+  padding: 8px;
+  color: white;
+  margin: 0 10px;
+}
+
+.navbar .vertical {
+  display: flex;
+}
+
+.navbar a:first-child {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.navbar a:last-child {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-right: 0;
+}
+
+.exit::after {
+  display: none;
+  color: white;
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  content: "✖";
+  font-size: 1.3rem;
+  width: 10%;
+  transition:  1s linear;
+}
+
+.open::after {
+  display: none;
+  color: white;
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  content: ">";
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 10%;
+}
+
+.name {
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+  min-width: 220px;
+  height: 100%;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+.links a:hover {
+  background-color: rgb(109, 105, 112);
+}
+
+@media only screen and (max-width: 610px) {
+  .horizontal {
+    width: 100%;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .navbar a {
+    margin: 0;
+  }
+
+  .vertical {
+    position: absolute;
+    flex-direction: column;
+    background-color: gray;
+    top: 70px;
+    right: 0px;
+    width: 70%;
+    animation: translateNav 0.2s linear;
+    justify-content: center;
+  }
+
+  @keyframes translateNav {
+    from {
+      right: -10px;
+    }
+    to {
+      right: 0px;
+    }
+  }
+
+  .vertical a {
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .vertical a:hover {
+    background-color: rgba(75, 70, 70, 0.733);
+  }
+
+  .vertical a:first-child {
+    margin-top: 10px;
+  }
+
+  .vertical a:last-child {
+    border: unset;
+    border-radius: unset;
+    margin-left: 0px;
+  }
+
+  .exit::after {
+    display: flex;
+  }
+
+  .open::after {
+    display: flex;
+  }
+}
