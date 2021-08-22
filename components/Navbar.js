@@ -8,18 +8,24 @@ export default function Navbar() {
   return (
     <div className={styles.navbar}>
       <div className={styles.horizontal} onClick={() => setOpen(false)}>
-        <Link href="/">
-          <a className={styles.name}>Sebastián Núñez</a>
-        </Link>
+        <div className={styles.nameContainer}>
+          <Link href="/">
+            <a className={styles.name}>Sebastián Núñez</a>
+          </Link>
+        </div>
         <div className={open ? styles.vertical : styles.links}>
-        <Link href="#about">
-            <a onClick={() => setOpen(false)} className={styles.about}>About</a>
+          <Link href="#about">
+            <a onClick={() => setOpen(false)} className={styles.about}>
+              About
+            </a>
           </Link>
           <Link href="#proyects">
             <a onClick={() => setOpen(false)}>Proyects</a>
           </Link>
           <Link href="#contact">
-            <a onClick={() => setOpen(false)}>Contact</a>
+            <a className={styles.contact} onClick={() => setOpen(false)}>
+              Contact
+            </a>
           </Link>
         </div>
       </div>

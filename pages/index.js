@@ -11,6 +11,12 @@ export default function Home() {
       <Head>
         <title>Sebastian Nuñez</title>
         <meta name="description" content="Sebastian Nuñez - Web Developer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <Navbar />
       <Container>

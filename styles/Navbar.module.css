@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgb(35, 96, 209);
+  background-color: #01c3e7;
   height: 70px;
   display: flex;
   justify-content: center;
@@ -25,18 +25,12 @@
   display: flex;
 }
 
-.navbar a:first-child {
+.navbar .name:first-child {
   display: flex;
   flex-grow: 1;
   align-items: center;
   margin-left: 0px;
   padding-left: 0px;
-}
-
-.navbar a:last-child {
-  border: 1px solid white;
-  border-radius: 5px;
-  margin-right: 0;
 }
 
 .exit::after {
@@ -48,7 +42,13 @@
   content: "✖";
   font-size: 1.3rem;
   width: 10%;
-  transition:  1s linear;
+  transition: 1s linear;
+}
+
+.contact {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-right: 0;
 }
 
 .open::after {
@@ -63,12 +63,21 @@
   width: 10%;
 }
 
+.nameContainer {
+  width: 100%;
+}
+
 .name {
   font-weight: bold;
   letter-spacing: 0.2rem;
-  font-size: 1.2rem;
+  font-size: 2rem;
   min-width: 220px;
   height: 100%;
+  width: fit-content;
+}
+
+.name:hover {
+  color: #353535;
 }
 
 .links {
@@ -79,10 +88,10 @@
 }
 
 .links a:hover {
-  background-color: rgb(109, 105, 112);
+  background-color: rgba(230, 230, 230, 0.31);
 }
 
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 768px) {
   .horizontal {
     width: 100%;
   }
@@ -93,6 +102,15 @@
 
   .navbar a {
     margin: 0;
+  }
+
+  .nameContainer {
+    width: 80%;
+  }
+
+  .name {
+    display: flex;
+    font-size: 1.3rem;
   }
 
   .vertical {
