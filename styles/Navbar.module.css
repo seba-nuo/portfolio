@@ -42,7 +42,6 @@
   content: "✖";
   font-size: 1.3rem;
   width: 10%;
-  transition: 1s linear;
 }
 
 .contact {
@@ -57,7 +56,10 @@
   margin-right: 5px;
   padding: 5px 10px;
   cursor: pointer;
-  content: ">";
+  content: "";
+  background-image: url(../public/hamburger.svg);
+  width: 30px;
+  height: 30px;
   font-size: 1.5rem;
   font-weight: bold;
   width: 10%;
@@ -122,14 +124,15 @@
     width: 70%;
     animation: translateNav 0.2s linear;
     justify-content: center;
+    overflow: hidden;
   }
 
   @keyframes translateNav {
     from {
-      right: -10px;
+      width: 10%;
     }
     to {
-      right: 0px;
+      width: 70%;
     }
   }
 
