@@ -1,0 +1,27 @@
+.foto {
+  background-image: url(../public/me.jpg);
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.subtitulo {
+  background-color: #353535;
+  color: white;
+  width: 50%;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 10px;
+}
+
+@media only screen and (max-width: 875px) { 
+  .subtitulo {
+    font-size: medium;
+  }
+}

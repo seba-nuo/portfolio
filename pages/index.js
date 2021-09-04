@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Container from "../components/Container";
-import About from "./About";
-import Proyects from "./Proyects";
-import Contact from "./Contact";
+import Acerca from "./Acerca";
+import Proyectos from "./Proyectos";
+import Contacto from "./Contacto";
+import styles from '../styles/index.module.css'
 
 export default function Home() {
   return (
@@ -13,10 +14,15 @@ export default function Home() {
         <meta name="description" content="Sebastian Nuñez - Web Developer" />
       </Head>
       <Navbar />
+        <article className={styles.foto}>
+          <h3 className={styles.subtitulo}>
+            Puedo crear sitios web completos desde el diseño hasta producción.
+          </h3>
+        </article>
       <Container>
-        <About />
-        <Proyects />
-        <Contact />
+        <Acerca />
+        <Proyectos />
+        <Contacto />
       </Container>
     </>
   );

@@ -2,14 +2,19 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   background-color: #353535;
 }
 
 .content {
   width: 80%;
-  height: 100vh;
   margin: 0 auto;
   color: white;
   max-width: 1000px;
+}
+
+@media only screen and (max-width: 875px) { 
+  .content {
+    width: 100%;
+    padding: 0 10px;
+  }
 }
